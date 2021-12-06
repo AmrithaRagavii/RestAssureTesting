@@ -1,5 +1,6 @@
-Maven Dependencies
-JRE System Library
-TestNG
-Target
-test_output
+.project
+.classpath
+.settings
+.metadata
+/test-output/
+/target/

@@ -3,8 +3,6 @@ package com.cg.tests;
 
 import static org.hamcrest.Matchers.*;
 
-import java.util.HashMap;
-import java.util.Map;
 
 import org.json.simple.JSONObject;
 import org.testng.Assert;
