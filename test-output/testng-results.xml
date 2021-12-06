@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="210" started-at="2021-12-06T15:32:41 IST" finished-at="2021-12-06T15:32:41 IST">
+  <suite name="Default suite" duration-ms="15748" started-at="2021-12-06T17:22:29 IST" finished-at="2021-12-06T17:22:45 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="210" started-at="2021-12-06T15:32:41 IST" finished-at="2021-12-06T15:32:41 IST">
-      <class name="com.cg.tests.FirstDemo">
-        <test-method status="PASS" signature="postID()[pri:0, instance:com.cg.tests.FirstDemo@4b1c1ea0]" name="postID" duration-ms="36" started-at="2021-12-06T15:32:41 IST" finished-at="2021-12-06T15:32:41 IST">
+    <test name="Default test" duration-ms="15748" started-at="2021-12-06T17:22:29 IST" finished-at="2021-12-06T17:22:45 IST">
+      <class name="com.cg.tests.PutPatchDelete">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.cg.tests.PutPatchDelete@7d70d1b1]" name="setUp" is-config="true" duration-ms="2159" started-at="2021-12-06T17:22:29 IST" finished-at="2021-12-06T17:22:31 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- postID -->
-      </class> <!-- com.cg.tests.FirstDemo -->
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="putID()[pri:0, instance:com.cg.tests.PutPatchDelete@7d70d1b1]" name="putID" duration-ms="9940" started-at="2021-12-06T17:22:31 IST" finished-at="2021-12-06T17:22:41 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- putID -->
+        <test-method status="PASS" signature="patchID()[pri:1, instance:com.cg.tests.PutPatchDelete@7d70d1b1]" name="patchID" duration-ms="2302" started-at="2021-12-06T17:22:41 IST" finished-at="2021-12-06T17:22:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- patchID -->
+        <test-method status="PASS" signature="deleteID()[pri:2, instance:com.cg.tests.PutPatchDelete@7d70d1b1]" name="deleteID" duration-ms="932" started-at="2021-12-06T17:22:44 IST" finished-at="2021-12-06T17:22:45 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteID -->
+      </class> <!-- com.cg.tests.PutPatchDelete -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

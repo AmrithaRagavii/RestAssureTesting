@@ -11,6 +11,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.*;
+
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import static io.restassured.matcher.RestAssuredMatchers.*;
 
@@ -34,27 +36,40 @@ public class FirstDemo {
 		baseURI="https://reqres.in/api";
 
 		given().
-		get("users").
+		get("/users?page=2").
 		then().
 		statusCode(200).
-		body("data[2].first_name",equalTo("Emma")).
-		body("data.first_name",hasItems("Emma","Charles"));
+		body("data[4].first_name",equalTo("George")).
+		body("data.first_name",hasItems("George","Rachel"));
 	}
 	
 	@Test
 	public void postID() {
-		Map<String,Object> m=new HashMap<String,Object>();
+		//      Map<String,Object> m=new HashMap<String,Object>();
 		
-		m.put("name","morpheus");
-		m.put("job","leader");
-		
-		System.out.println(m);
+//		m.put("name","morpheus");
+//		m.put("job","leader");
+//		
+//		System.out.println(m);
 		
 		JSONObject req=new JSONObject();
 		req.put("name","morpheus");
 		req.put("job","leader");
 		
 		System.out.println(req.toJSONString());	
+		baseURI="https://reqres.in/api";
+		
+		given().
+		header("Content_Type","application/json").
+		contentType(ContentType.JSON).
+		accept(ContentType.JSON).
+		body(req.toJSONString()).
+		when().
+		post("/users").
+		then().
+		statusCode(201);
+		
+		
 	}
 }
 

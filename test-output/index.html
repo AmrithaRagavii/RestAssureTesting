@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\amrit\AppData\Local\Temp\testng-eclipse-963239319\testng-customsuite.xml</span>
+                    <span>C:\Users\amrit\AppData\Local\Temp\testng-eclipse-1234495443\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,7 +104,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.cg.tests.FirstDemo" hash-for-method="postID">postID</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.cg.tests.PutPatchDelete" hash-for-method="deleteID">deleteID</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.cg.tests.PutPatchDelete" hash-for-method="patchID">patchID</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.cg.tests.PutPatchDelete" hash-for-method="putID">putID</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -122,14 +132,28 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.cg.tests.FirstDemo</span>
+              <span class="class-name">com.cg.tests.PutPatchDelete</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="postID">
-                  </a> <!-- postID -->
-                  <span class="method-name">postID</span>
+                  <a name="deleteID">
+                  </a> <!-- deleteID -->
+                  <span class="method-name">deleteID</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="patchID">
+                  </a> <!-- patchID -->
+                  <span class="method-name">patchID</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="putID">
+                  </a> <!-- putID -->
+                  <span class="method-name">putID</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -137,7 +161,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\amrit\AppData\Local\Temp\testng-eclipse-963239319\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\amrit\AppData\Local\Temp\testng-eclipse-1234495443\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -146,7 +170,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.cg.tests.FirstDemo&quot;/&gt;
+      &lt;class name=&quot;com.cg.tests.PutPatchDelete&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -186,16 +210,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'postID')
-data.setCell(0, 2, 'com.cg.tests.FirstDemo')
-data.setCell(0, 3, 36);
+data.setCell(0, 1, 'putID')
+data.setCell(0, 2, 'com.cg.tests.PutPatchDelete')
+data.setCell(0, 3, 9940);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'patchID')
+data.setCell(1, 2, 'com.cg.tests.PutPatchDelete')
+data.setCell(1, 3, 2302);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'deleteID')
+data.setCell(2, 2, 'com.cg.tests.PutPatchDelete')
+data.setCell(2, 3, 932);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 36 ms</span>
+              <span class="suite-total-time">Total running time: 13 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -221,10 +253,22 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.cg.tests.FirstDemo</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">postID</span>
+              <div class="chronological-class-name">com.cg.tests.PutPatchDelete</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">putID</span>
+                <span class="method-start">2447 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">patchID</span>
+                <span class="method-start">12457 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteID</span>
+                <span class="method-start">14789 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
