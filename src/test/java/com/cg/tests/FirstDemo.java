@@ -15,7 +15,7 @@ import io.restassured.response.Response;
 import static io.restassured.matcher.RestAssuredMatchers.*;
 
 public class FirstDemo {
-	//@Test
+	@Test
 	public static void getUsersByID() {
 		Response r= get("https://reqres.in/api/users?page=2");
 
@@ -28,7 +28,7 @@ public class FirstDemo {
 		int statusCode=r.getStatusCode();
 		Assert.assertEquals(statusCode,200);
 	}
-	//@Test
+	@Test
 	public void testExample() {
 
 		baseURI="https://reqres.in/api";
