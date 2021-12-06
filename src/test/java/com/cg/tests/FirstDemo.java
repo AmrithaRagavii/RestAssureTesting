@@ -1,0 +1,60 @@
+package com.cg.tests;
+
+
+import static org.hamcrest.Matchers.*;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.json.simple.JSONObject;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import static io.restassured.RestAssured.*;
+import io.restassured.response.Response;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+
+public class FirstDemo {
+	//@Test
+	public static void getUsersByID() {
+		Response r= get("https://reqres.in/api/users?page=2");
+
+		System.out.println(r.getStatusCode()); 
+		System.out.println(r.getTime());
+		System.out.println(r.getBody().asString());
+		System.out.println(r.getStatusLine());
+		System.out.println(r.contentType());
+
+		int statusCode=r.getStatusCode();
+		Assert.assertEquals(statusCode,200);
+	}
+	//@Test
+	public void testExample() {
+
+		baseURI="https://reqres.in/api";
+
+		given().
+		get("users").
+		then().
+		statusCode(200).
+		body("data[2].first_name",equalTo("Emma")).
+		body("data.first_name",hasItems("Emma","Charles"));
+	}
+	
+	@Test
+	public void postID() {
+		Map<String,Object> m=new HashMap<String,Object>();
+		
+		m.put("name","morpheus");
+		m.put("job","leader");
+		
+		System.out.println(m);
+		
+		JSONObject req=new JSONObject();
+		req.put("name","morpheus");
+		req.put("job","leader");
+		
+		System.out.println(req.toJSONString());	
+	}
+}
+

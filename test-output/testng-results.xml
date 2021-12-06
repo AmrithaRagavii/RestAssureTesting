@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="210" started-at="2021-12-06T15:32:41 IST" finished-at="2021-12-06T15:32:41 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="210" started-at="2021-12-06T15:32:41 IST" finished-at="2021-12-06T15:32:41 IST">
+      <class name="com.cg.tests.FirstDemo">
+        <test-method status="PASS" signature="postID()[pri:0, instance:com.cg.tests.FirstDemo@4b1c1ea0]" name="postID" duration-ms="36" started-at="2021-12-06T15:32:41 IST" finished-at="2021-12-06T15:32:41 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postID -->
+      </class> <!-- com.cg.tests.FirstDemo -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
