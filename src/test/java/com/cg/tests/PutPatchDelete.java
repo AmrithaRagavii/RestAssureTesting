@@ -8,12 +8,9 @@ import org.testng.annotations.Test;
 
 import io.restassured.http.ContentType;
 
-public class PutPatchDelete {
+public class PutPatchDelete extends BasicSetUp {
 
-		@BeforeTest
-		public void setUp(){
-			baseURI="https://reqres.in/api";
-		}
+		
 	@Test(priority = 0)
 	public void putID() {
 

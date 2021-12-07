@@ -1,0 +1,9 @@
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+<body>
+<add xmlns="http://tempurl.org/">
+<intA>2</intA>
+<intB>1</intB>
+</add>
+</body>
+</Envelope>
+

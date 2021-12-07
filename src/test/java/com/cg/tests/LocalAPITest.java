@@ -27,56 +27,58 @@ public class LocalAPITest {
 
 	@Test(priority = 1)
 	public void post() {
-		Map<String,Object> m=new HashMap<String,Object>();
-		m.put("firstName","Amritha");
-		m.put("lastName","Preethi");
-		m.put("id",33);
-		JSONObject request= new JSONObject(m);
+		//		Map<String,Object> m=new HashMap<String,Object>();
+		//		m.put("firstName","Amritha");
+		//		m.put("lastName","Preethi");
+		//		m.put("id",33);
+		JSONObject request= new JSONObject();
+		request.put("firstName","Puma");
+		request.put("lastName","Ragu");
 
 		given().contentType(ContentType.JSON).
 		accept(ContentType.JSON).
 		body(request.toJSONString()).
 		post("/users").
 		then().
-		statusCode(500).log().all();
+		statusCode(201).log().all();
 	}
 
 	@Test(priority = 2)
 	public void put() {
-		Map<String,Object> m=new HashMap<String,Object>();
-		m.put("id",34);
-		JSONObject request= new JSONObject(m);
+
+		JSONObject request= new JSONObject();
+		request.put("lastName","Amala");
+
 		given().contentType(ContentType.JSON).
 		accept(ContentType.JSON).
 		body(request.toJSONString()).
 		when().
-		put("/users[0].lastName").
+		put("/users/2").
 		then().
-		statusCode(404);
+		statusCode(200);
 	}
 
 
 	@Test(priority = 3)
 	public void patch() {
-		Map<String,Object> m=new HashMap<String,Object>();
 
-		JSONObject request= new JSONObject(m);
+		JSONObject request= new JSONObject();
 
-		m.put("lastName","Ragavi");	
+		request.put("lastName","Roshan");	
 
 		given().contentType(ContentType.JSON).
 		accept(ContentType.JSON).
 		body(request.toJSONString()).
 		when().
-		patch("/users[2].id").
+		patch("/users/1").
 		then().
-		statusCode(404);
+		statusCode(200);
 	}
 
 	@Test(priority = 4)
 	public void delete() {
 		when().
-		delete("/Subjects[0].name").
+		delete("/users/35").
 		then().
 		statusCode(404);
 	}
