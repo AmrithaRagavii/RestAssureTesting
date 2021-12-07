@@ -1,4 +1,4 @@
-### Getting started With Github
+### RestAssured API Test Automation
 
 #### Run the following the commands from Terminals Github and CMD :
 
