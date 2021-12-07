@@ -1,6 +1,5 @@
 test-output/
 target/
-/src/main/app/node_modules/**
 .settings
 .project
 .classpath
