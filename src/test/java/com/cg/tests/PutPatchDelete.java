@@ -13,7 +13,6 @@ public class PutPatchDelete {
 		@BeforeTest
 		public void setUp(){
 			baseURI="https://reqres.in/api";
-			
 		}
 	@Test(priority = 0)
 	public void putID() {
