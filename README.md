@@ -2,19 +2,19 @@
 
 #PREREQUISITES
 
-Java JDK
-Maven
+Java JDK <br>
+Maven <br>
 node js
 
 #Dependencies
 
-RestAssured
-testNG
+RestAssured <br>
+testNG <br>
 JSON
 
 # Local API
 
-Command for Install JSON Server ->npm install json-server
+Command for Install JSON Server ->npm install json-server <br>
 Command to start JSON Server -> json-server --watch db.json
 
 
