@@ -12,6 +12,12 @@ RestAssured <br>
 testNG <br>
 JSON
 
+#API source
+
+ReqRes API: https://reqres.in/
+Localhost: http://localhost:3000/
+
+
 # Local API
 
 Command for Install JSON Server ->npm install json-server <br>
