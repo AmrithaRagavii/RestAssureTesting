@@ -35,10 +35,6 @@ public class FirstDemo extends BasicSetUp {
 		Assert.assertEquals(jp.getList("data").size(),6);
 		Assert.assertTrue(jp.getString("data[0].email").contains("@reqres.in"));
 		Assert.assertEquals(jp.getString("data[1].email"),"lindsay.ferguson@reqres.in");
-
-
-
-
 	}
 
 
@@ -53,33 +49,25 @@ public class FirstDemo extends BasicSetUp {
 		body("data.first_name",hasItems("George","Rachel"));
 	}
 
-
+    //postMethod
 	@Test
-	public void postID() {
-		//      Map<String,Object> m=new HashMap<String,Object>();
+	public static void createUser() {
 
-		//		m.put("name","morpheus");
-		//		m.put("job","leader");
-		//		
-		//		System.out.println(m);
+		JSONObject jo = new JSONObject();
+		jo.put("name", "Ragavi");
+		jo.put("job", "Tester");
 
-		JSONObject req=new JSONObject();
-		req.put("name","morpheus");
-		req.put("job","leader");
+		Response response = given().contentType(ContentType.JSON).accept(ContentType.JSON).body(jo.toJSONString())
+				      .when().post("/users")
+				      .then().extract().response();
 
-		System.out.println(req.toJSONString());	
-		
-		given().
-		header("Content_Type","application/json").
-		contentType(ContentType.JSON).
-		accept(ContentType.JSON).
-		body(req.toJSONString()).
-		when().
-		post("/users").
-		then().
-		statusCode(201);
+		JsonPath jpath = new JsonPath(response.asString());
 
-
+		Assert.assertEquals(response.statusCode(), 201);
+		Assert.assertNotNull(jpath.getInt("id"));
+		Assert.assertEquals(jpath.getString("name"), "Ragavi");
+		Assert.assertEquals(jpath.getString("job"), "Tester");
+		Assert.assertNotNull(jpath.getString("createdAt"));
 	}
 }
 

@@ -1,0 +1,42 @@
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+<body>
+<add xmlns="http://tempurl.org/">
+<intA>2</intA>
+<intB>1</intB>
+</add>
+</body>
+</Envelope>
+
+package com.cg.tests;
+
+import org.testng.annotations.Test;
+
+import io.restassured.http.ContentType;
+import io.restassured.internal.util.IOUtils;
+
+import static io.restassured.RestAssured.given;
+
+import java.io.FileInputStream;
+
+import static io.restassured.RestAssured.baseURI;
+class SoapXMLRequest {
+	@Test
+	public void soapXMLValidation() {
+		
+		
+		FileInputStream fis=new FileInputStream("./SoapFile/add.xml");
+		
+		String request= org.apache.commons.io:IOUtils.toString(fis, "UTF-8");
+		baseURI="http://www.dneonline.com";
+		
+		given().contentType("text/xml").
+		accept(ContentType.XML).
+		body(request).
+		when().
+		 post("/calculator.asmx").
+		 then().
+		 statusCode(200);
+	
+	}
+
+}
